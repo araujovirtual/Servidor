@@ -17,6 +17,7 @@ public class Principal {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         Servidor servidor = new Servidor();
         servidor.criaServidor(5555);
+        // LOOP
         while (true) {
             Socket s = servidor.esperaConexao();
             Thread t = new Thread(servidor);
